@@ -1,0 +1,163 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{ /*definido as variaveis principais do projeto, o root e a raiz*/
+    --text_color: white;
+    --bg-url: url(./assets/bg-mobile.jpg);
+    --stroke--color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --sufarce-color-hover: rgba(0, 0, 0, 0.2);
+    -highlightcolor: rgba(0, 0, 0, 0.2);
+    --borda: white;
+    --botao-url: url(./assets/MoonStars.png);
+}
+
+.light{ 
+    --text_color: black;
+    --bg-url: url(./assets/light.jpg);
+    --stroke--color: rgba(0, 0, 0, 0.05);
+    --surface-color:  rgba(0, 0, 0, 0.05);
+    --sufarce-color-hover: rgba(0, 0, 0, 0.2);
+    --highlightcolor: rgba(0, 0, 0, 0.1);
+    --borda: black;
+    --botao-url: url(./assets/Sun.png);
+}
+
+/*fundo do site*/
+body{
+    background-image:  var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover; /* serve para preencher todos os espacos*/
+   /*apenas agrupei o de cima background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+   */
+
+}
+
+p{
+    text-align: center;
+    padding: 16px;
+
+}
+
+body *{ /*fonte e cor da letra*/
+    font-family: "inter", sans-serif;
+    color:var(--text_color);
+}
+
+#container{
+    width: 360px;
+  /*  border: 1px solid rgb(254, 24, 24);essa linha cria uma borda dentro do meu contair para entender como estao posicioandas as informaacoes*/
+   /*  margin-top: 56px;
+   /* margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;*/
+    margin: 56px auto 0px; /* essa linha e um resumo dessass /* margin-right: auto;  margin-bottom: auto; margin-left: auto; e um agrupamento*/ 
+    padding: 0 24px;
+
+}
+
+#swith{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+/*botao*/
+#swith button{
+    height: 32px;
+    width: 32px;
+    background: white var(--botao-url) no-repeat center;
+    border: 0 ;
+    border-radius: 50%;
+
+    position: absolute; /*centralizar*/
+    top: 50%;
+    right: 0;
+    z-index: 1; /*fica a frente do elemnto*/
+    transform: translateY(-50%);
+}
+
+.light #switch button{
+    right: 0;
+    left: initial;
+}
+
+#swith span{
+    display: block;
+    height: 24px;
+    width: 64px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke--color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+#profile{ /*fica dentto da caixxa container caixa que fica a logo e o @*/
+   background-color: white;
+   border-radius: 60%;
+   border: 1px solid black;
+    padding: 16px;
+    text-align: center; /*alinhamento de display*/
+    padding: 16px;
+    top: 8px;
+}
+
+#profile img{
+    width: 112px;
+}
+
+#profile p{
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+ul{
+    list-style: none; /*tira pontos que ficam em frente a palavra na lista por exeplo bolinha-texto (nao sei fazer a olinha no mc)*/
+    display: flex;
+    flex-direction: column; /* se deixasse somente o display ele colcoaria as opcoes uma do lado da outra, po isso temos que usar o fle-d...*/
+    gap: 16px;
+    padding: 24px 0;
+}
+
+ul li a{
+    border: 1px solid var(--borda);
+    display: flex; /* alem disso permite que o etxto fique alinahdo se eu usasse o blox ele so daria um perno recuo, alinha a caixa para ficar centralizada e usar todo o espaco*/
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+    background:var(--stroke--color);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none; /*o text-decoration serve apra remover, colocar linha no texto o none esta dizendo que nao quer nehnhuma linha embaixo do texto o underline ficarinha com a linha embaixo do texto*/
+    font-weight: 500;
+    transition: background 0.2s;
+}
+ul li a:hover {
+    background: var(--sufarce-color-hover);
+    border: 1.5px solid var(--text_color);
+}
+
+#social-link a:hover{
+    background: var(--highlightcolor);
+}
+
+#social-link{
+    display: flex; /*deixa um do lado do ouro e usase o display para usar o gap*/
+    gap: 16px; /*o gap e o espaco entre os elementos*/
+    padding: 24px 0;
+    font-size: 24px; /*tamanho do elemento*/
+    justify-content: center; /* alinha ao centro */
+}
+footer{
+    text-align: center;
+    font-size: 14px;
+}
