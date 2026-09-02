@@ -51,7 +51,8 @@ body *{ /*fonte e cor da letra*/
 }
 
 #container{
-    width: 360px;
+    width: 100%;
+    max-width: 588px; /*essa linha limita a largura do container, para que ele nao fique muito grande*/
   /*  border: 1px solid rgb(254, 24, 24);essa linha cria uma borda dentro do meu contair para entender como estao posicioandas as informaacoes*/
    /*  margin-top: 56px;
    /* margin-right: auto;
