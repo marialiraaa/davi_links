@@ -99,9 +99,9 @@ body *{ /*fonte e cor da letra*/
 }
 
 #profile{ /*fica dentto da caixxa container caixa que fica a logo e o @*/
-   background-color: white;
+   background-color: #A99AC8;
    border-radius: 60%;
-   border: 1px solid black;
+   border: 1px solid var(--borda);
     padding: 16px;
     text-align: center; /*alinhamento de display*/
     padding: 16px;
